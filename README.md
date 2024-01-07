@@ -1,6 +1,6 @@
 # Overview
 
-This repository contains a prototyped version of FIRM described in our [OSDI '20](https://www.usenix.org/conference/osdi20/presentation/qiu) paper "FIRM: An Intelligent Fine-grained Resource Management Framework for SLO-oriented Microservices".
+This repository is a copy version of FIRM described in [OSDI '20](https://www.usenix.org/conference/osdi20/presentation/qiu) paper "FIRM: An Intelligent Fine-grained Resource Management Framework for SLO-oriented Microservices".
 
 ## Instructions
 
