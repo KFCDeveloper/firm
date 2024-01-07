@@ -16,15 +16,26 @@ RUN set -eux; \
     ;
 
 RUN set -eux; \
-    apk add --no-cache --virtual docker-compose-depts \
+    apk add --no-cache --virtual \
+	docker-compose \
         gcc \
         libc-dev \
         libffi-dev \
         openssl-dev \
         py-pip \
-        python-dev \
-    ; \
-    pip install docker-compose;
+        python3-dev \
+    ; 
+
+# RUN set -eux; \
+#     apk add --no-cache --virtual docker-compose-depts \
+#         gcc \
+#         libc-dev \
+#         libffi-dev \
+#         openssl-dev \
+#         py-pip \
+#         python-dev \
+#     ; \
+#     pip install docker-compose;
 
 RUN set -eux; \
     curl -L "https://storage.googleapis.com/kubernetes-release/release/${kubectl_version}/bin/linux/amd64/kubectl" -o /usr/local/bin/kubectl; \
