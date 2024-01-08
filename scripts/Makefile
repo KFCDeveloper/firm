@@ -34,8 +34,8 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 ###############################################################################
-
-LIBDIR ?= ../../../lib
+# KFCDeveloper: FIRM's author suppose "../../../" is root directory
+LIBDIR ?= ../../../../lib 
 CFLAGS =-I$(LIBDIR) \
 	-W -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes \
 	-Wmissing-declarations -Wold-style-definition -Wpointer-arith \
