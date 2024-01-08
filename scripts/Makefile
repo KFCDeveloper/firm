@@ -35,7 +35,7 @@
 #
 ###############################################################################
 # KFCDeveloper: FIRM's author suppose "../../../" is root directory
-LIBDIR ?= ../../../../lib 
+LIBDIR ?= /lib 
 CFLAGS =-I$(LIBDIR) \
 	-W -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes \
 	-Wmissing-declarations -Wold-style-definition -Wpointer-arith \
