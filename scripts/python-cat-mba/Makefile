@@ -36,9 +36,8 @@
 env:
 	@bash -c "virtualenv -p python3 env"
 	@bash -c "source env/bin/activate && \
-		make -C ../../lib/python install; \
 		deactivate"
-
+# make -C ../../lib/python install; \
 clean:
 	@rm -rf env
 	@rm -rf __pycache__ *.pyc
