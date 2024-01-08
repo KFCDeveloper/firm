@@ -3,7 +3,7 @@
 This repository is a copy version of FIRM described in [OSDI '20](https://www.usenix.org/conference/osdi20/presentation/qiu) paper "FIRM: An Intelligent Fine-grained Resource Management Framework for SLO-oriented Microservices".
 
 ## Instructions
-
+KFCDeveloper: Make sure your project directory is `~/<your_name>/firm` otherwise you will get errors.
 ### Machine Prerequisite
 
 The following is the support matrix for Intel Cache Allocation Technology (CAT) and Memory Bandwidth Allocation (MBA) technology:
