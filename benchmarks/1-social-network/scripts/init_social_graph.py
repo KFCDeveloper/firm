@@ -31,8 +31,8 @@ def getEdges(file):
 async def register(addr, nodes):
   idx = 0
   tasks = []
-  conn = aiohttp.TCPConnector(limit=200)
-  async with aiohttp.ClientSession(connector=conn) as session:
+  conn = aiohttp.TCPConnector(limit=200) # ,ssl=False
+  async with aiohttp.ClientSession(connector=conn) as session: # , trust_env=True
     for i in range(1, nodes + 1):
       task = asyncio.ensure_future(upload_register(session, addr, str(i)))
       tasks.append(task)
@@ -47,8 +47,8 @@ async def register(addr, nodes):
 async def follow(addr, edges):
   idx = 0
   tasks = []
-  conn = aiohttp.TCPConnector(limit=200)
-  async with aiohttp.ClientSession(connector=conn) as session:
+  conn = aiohttp.TCPConnector(limit=200) # ,ssl=False
+  async with aiohttp.ClientSession(connector=conn) as session: # , trust_env=True
     for edge in edges:
       task = asyncio.ensure_future(upload_follow(session, addr, edge[0], edge[1]))
       tasks.append(task)
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     edges = getEdges(file)
 
   # Use your cluster-ip here:
-  addr = "http://10.108.29.192:8080"
+  addr = "http://10.108.29.192:8080" # 10.105.83.130
   print("Server Address:", addr)
   loop = asyncio.get_event_loop()
   future = asyncio.ensure_future(register(addr, nodes))
